@@ -3,9 +3,9 @@ function pegarUserGithub(userName) {
     fetch ('https://api.github.com/users/' + userName)
     .then(function (resultado) {
         resultado.json().then(function (data) {
-            console.log('User data: ', data)
-            mostrarUserGitHub(data)
-            mostrarLoginGitHub(data)
+            console.log('User data: ', data);
+            mostrarUserGitHub(data);
+            mostrarLoginGitHub(data);
         })
     }).catch(function (erro) {
         console.log('erro: ', erro)
