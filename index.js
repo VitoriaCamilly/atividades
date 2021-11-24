@@ -6,6 +6,14 @@ function pegarUserGithub(userName) {
             console.log('User data: ', data);
             mostrarUserGitHub(data);
         })
+    }).catch(function (erro) {
+        console.log('erro: ', erro);
+    });
+}
+
+function pegarLoginGithub(login) {
+    fetch ('https://api.github.com/users/' + login)
+    .then(function (resultado) {
         resultado.json().then(function(login) {
             console.log('User login: ', login);
             mostrarLoginGitHub(login);
