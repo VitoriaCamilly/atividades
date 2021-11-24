@@ -4,7 +4,7 @@ function pegarUserGithub(userName) {
     .then(function (resultado) {
         resultado.json().then(function (data) {
             console.log('User data: ', data)
-            showUserGitHub()
+            mostrarUserGitHub()
         })
     }).catch(function (erro) {
         console.log('erro: ', erro)
@@ -16,6 +16,13 @@ function mostrarUserGitHub() {
     let divName = document.createElement('div');
     divName.innerText = user.userName;
     document.body.appendChild(divName);
+}
+
+function mostrarLoginGitHub() {
+    if (!login) return;
+    let divLogin = document.createElement('div');
+    divLogin.innerText = user.login;
+    document.body.appendChild(divLogin);
 }
 
 function usarRepositoriosGithub(userName) {
