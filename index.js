@@ -40,19 +40,19 @@
    // });
 //}
 
-function pegarUserGithub(userName) {
+function getUserGithub(userName) {
     fetch('https://api.github.com/users/' + userName)
         .then(function (resultado) {
             resultado.json().then(function (data) {
                 console.log('User Data:', data);
-                mostrarUserGithub(data);
+                showUserGithub(data);
             });
         }).catch(function (erro) {
             console.log('erro:', erro);
         });
 }
 
-function mostrarUserGithub(user) {
+function showUserGithub(user) {
     if (!user) return;
     let divName = document.createElement('div');
     divName.innerText = user.login;
