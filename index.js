@@ -57,6 +57,7 @@ function showUserGithub(user) {
     let divName = document.createElement('div');
     divName.innerText = user.login;
     document.body.appendChild(divName);
+    console.log('show');
 }
 
 function getUserReposGithub(userName) {
