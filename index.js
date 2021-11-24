@@ -8,8 +8,8 @@ function pegarUserGithub(userName) {
             mostrarLoginGitHub(data);
         })
     }).catch(function (erro) {
-        console.log('erro: ', erro)
-    })
+        console.log('erro: ', erro);
+    });
 }
 
 function mostrarUserGitHub(user) {
@@ -30,9 +30,9 @@ function usarRepositoriosGithub(userName) {
     fetch ('https://api.github.com/users/' + userName + '/repos')
     .then(function (resultado) {
         resultado.json().then(function (data) {
-            console.log('User data: ', data)
-        })
+            console.log('Repositories data: ', data);
+        });
     }).catch(function (erro) {
-        console.log('erro: ', erro)
-    })
+        console.log('erro: ', erro);
+    });
 }
