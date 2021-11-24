@@ -1,6 +1,6 @@
 
 function pegarUserGithub(userName) {
-    fetch ('https://api.github.com/users/', userName)
+    fetch ('https://api.github.com/users/' + userName)
     .then(function (resultado) {
         resultado.json().then(function (data) {
             console.log('User data: ', data)
