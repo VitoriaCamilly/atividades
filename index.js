@@ -5,7 +5,10 @@ function pegarUserGithub(userName) {
         resultado.json().then(function (data) {
             console.log('User data: ', data);
             mostrarUserGitHub(data);
-            mostrarLoginGitHub(data);
+        })
+        resultado.json().then(function(login) {
+            console.log('User login: ', login);
+            mostrarLoginGitHub(login);
         })
     }).catch(function (erro) {
         console.log('erro: ', erro);
@@ -19,10 +22,10 @@ function mostrarUserGitHub(user) {
     document.body.appendChild(divName);
 }
 
-function mostrarLoginGitHub(login) {
-    if (!login) return;
+function mostrarLoginGitHub(userLogin) {
+    if (!userLogin) return;
     let divLogin = document.createElement('div');
-    divLogin.innerText = user.login;
+    divLogin.innerText = userLogin.login;
     document.body.appendChild(divLogin);
 }
 
