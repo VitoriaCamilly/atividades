@@ -1,5 +1,5 @@
 
-function pegarUserGithub(userName) {
+function getUserGithub(userName) {
     fetch ('https://api.github.com/users/' + userName)
     .then(function (resultado) {
         resultado.json().then(function (data) {
@@ -11,7 +11,7 @@ function pegarUserGithub(userName) {
     });
 }
 
-function pegarLoginGithub(login) {
+function getLoginGithub(login) {
     fetch ('https://api.github.com/users/' + login)
     .then(function (resultado) {
         resultado.json().then(function(login) {
